@@ -7,7 +7,7 @@ Author: by wang_yang1980@hotmail.com
 from distutils.core import setup
 
 from os.path import abspath, dirname, join
-with open(join(dirname(abspath(__file__)), 'target', 'src', 'version.py')) as f:
+with open(join(dirname(abspath(__file__)), 'src', 'version.py')) as f:
     exec(f.read())
 
 
@@ -36,7 +36,7 @@ setup(name         = 'robotframework-SikuliLibrary',
       keywords     = 'robotframework testing testautomation sikuli UI',
       platforms    = 'any',
       classifiers  = CLASSIFIERS.splitlines(),
-      package_dir  = {'' : 'target/src'},
+      package_dir  = {'' : 'src'},
       packages     = ['SikuliLibrary'],
       package_data = {'SikuliLibrary': ['lib/*.jar',
                                           ]},
